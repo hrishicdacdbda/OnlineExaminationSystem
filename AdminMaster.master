@@ -1,0 +1,334 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link id="Link1" runat="server" rel="shortcut icon" href="images/GCEK_logo_new1.ico" type="image/x-icon"/>
+                <link id="Link2" runat="server" rel="icon" href="images/GCEK_logo_new1.ico" type="image/ico"/>
+    
+    <title>ExamO&#9821;</title>
+
+    <!-- Bootstrap -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+     <link href="css/my.css" rel="stylesheet" /> 
+      <link href="css/animation.css" rel="stylesheet" />
+   
+    <link href="css/bootstrap2.css" rel="stylesheet" />
+    <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="Content/footer2.css" rel="stylesheet" />
+    <link href="Content/navstyle.css" rel="stylesheet" />
+    <link href="Content/w3.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+         #backtotop {
+    border-radius: 50%;
+    line-height: 48px;
+    background-color: #333;
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    text-align: center;
+    width: 50px;
+    right: 30px;
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+    color: #FFF;
+    font-size: 11px;
+    height: 50px;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+#backtotop:hover {
+    background-color: #d6644a;
+    transition: .4s;
+    color: #fff;
+}
+
+#backtotop.active {
+    opacity: 1;
+}
+body {
+      position: relative; 
+  }
+  .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+  
+    </style>
+</head>
+<body style="font-family: Ubuntu" id="top">
+    <form id="form1" runat="server">
+    <div>
+         <!--affix-->
+      
+<!--affix-->
+         <!--Navigation start -->
+<nav class="navbar navbar-default  navbar-inverse " style=" " role="navigation" data-spy="affix" data-offset-top="197">
+  <div class="container-fluid">
+       <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="Div4">
+         <!--Side Navigation start-->
+         <ul class="nav navbar-nav  navbar-left">
+        
+          <li class="navbar-left"> <nav class=" w3-sidenav w3-light-grey w3-animate-left " style="display:none;z-index:5;width:50%">
+  
+ <div class="w3-container w3-dark-grey">
+    <h4><a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-closenav w3-large">Menu  &times;</a></h4>
+  </div>
+
+  <img src="images/Chess-Wallpapers-and-Background1.jpg" alt="Fjords" style="width:100%">
+  <a class="w3-red w3-padding" href="#">Home</a>
+  <a class="w3-padding" href="AdminHome.aspx">Admin<span class="w3-tag w3-red w3-round w3-right">8</span></a>
+  	
+
+ <div class="w3-container w3-section">
+    <div class="w3-border w3-round w3-padding w3-blue-grey">
+      <span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span>
+      <p>Lorem ipsum box...</p>
+    </div>
+  </div>
+
+</nav>
+
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"></div>
+
+<div class="w3-container">
+  <span class="w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+  
+</div>  </li>
+         </ul> <!--Side Navigation End-->
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#"><span><img alt="logo" src="images/GCEK_logo_new1.png" height="50" /></span>Examo.com<i class="glyphicon glyphicon-bishop"></i></a>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+      <ul class="nav navbar-nav">
+       <li class="active"><a href="Home.aspx"><i class="fa fa-home" style="font-size: medium"></i>&nbsp;Home</a></li>
+        <li><a href="Products.aspx">Books</a></li>
+           <li><a href="UserProfile.aspx">User Profile</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="About-Us.aspx">About Us</a></li>
+            <li><a href="AdminInfoAll.aspx">About Admin</a></li>
+            <li><a href="InfoChessNSkate.aspx">About Chess & Skating</a></li>
+            <li class="divider"></li>
+            <li><a href="Our-Team.aspx">Our-Team</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+         <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/SignUpForm.aspx"><b>&#128104;</b> Sign Up</asp:HyperLink>
+              </li>
+        <li><p class="navbar-text">Already signed in?</p></li>
+              <!--dropdown login start-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> <b> Login </b> <span class="caret"></span></a>
+			<ul id="login-dp" class="dropdown-menu dropdown-lr animated flipInX">
+				<li>
+					 <div class="row">
+							 <div class="col-md-12">
+								Fallow Us</div>
+                               <div class="col-md-13">
+								<div class="social-buttons ">
+									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+								</div></div>
+                         <div class="col-md-12">
+                                or
+                         
+								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputEmail2">User Name</label>
+											                                            <asp:TextBox ID="exampleInputEmail2" runat="server" placeholder="User Name" required="required" CssClass="form-control"></asp:TextBox>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputPassword2">Password</label>
+											                                            <asp:TextBox ID="exampleInputPassword2" runat="server" placeholder="Password" required="required" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                             <div class="help-block text-right"><a href="ForgotPassword.aspx">
+                                                 <asp:Label ID="Label1" runat="server" Text="." ForeColor="Red"></asp:Label>
+                                                 Forget the password ?</a></div>
+										</div>
+										<div class="form-group">
+											
+                                            <asp:Button ID="Button1" runat="server" Text="Sign in" CssClass="btn btn-primary btn-block" OnClick="Button1_Click" />
+										</div>
+										
+								 </form>
+							</div>
+							<div class="bottom text-center">
+								New here ? <a href="#"><b>Join Us</b></a>
+							</div>
+					 </div>
+				</li>
+			</ul>
+        </li>
+      </ul>
+        <!--drop down login end-->
+      
+
+ <!--Search and button end--> 
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+   
+        <!--navigation end-->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <!--footer start from here-->
+
+ <div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2016 - All Rights with ExamO.com</p>
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+        <li><a href="#">ExamO.com</a></li>
+        <li><a href="Home.aspx">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        
+       </ul>
+    </div>
+  </div>
+</div>
+     <a href="#top" class="scroll" data-speed="450"><div id="backtotop" class="active pull-right "><i class="glyphicon glyphicon-chevron-up"></i></div></a>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+     <script src="js/my.js" type="text/javascript"></script>
+    <script src="js/my2.js" type="text/javascript"></script>
+    
+     
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function w3_open() {
+            document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+            document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+        }
+        function w3_close() {
+            document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+            document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+        }
+</script>
+     <script>
+         (function () {
+
+             'use strict';
+
+             // Feature Test
+             if ('querySelector' in document && 'addEventListener' in window && Array.prototype.forEach) {
+
+                 // Function to animate the scroll
+                 var smoothScroll = function (anchor, duration) {
+
+                     // Calculate how far and how fast to scroll
+                     var startLocation = window.pageYOffset;
+                     var endLocation = anchor.offsetTop;
+                     var distance = endLocation - startLocation;
+                     var increments = distance / (duration / 16);
+                     var stopAnimation;
+
+                     // Scroll the page by an increment, and check if it's time to stop
+                     var animateScroll = function () {
+                         window.scrollBy(0, increments);
+                         stopAnimation();
+                     };
+
+                     // If scrolling down
+                     if (increments >= 0) {
+                         // Stop animation when you reach the anchor OR the bottom of the page
+                         stopAnimation = function () {
+                             var travelled = window.pageYOffset;
+                             if ((travelled >= (endLocation - increments)) || ((window.innerHeight + travelled) >= document.body.offsetHeight)) {
+                                 clearInterval(runAnimation);
+                             }
+                         };
+                     }
+                         // If scrolling up
+                     else {
+                         // Stop animation when you reach the anchor OR the top of the page
+                         stopAnimation = function () {
+                             var travelled = window.pageYOffset;
+                             if (travelled <= (endLocation || 0)) {
+                                 clearInterval(runAnimation);
+                             }
+                         };
+                     }
+
+                     // Loop the animation function
+                     var runAnimation = setInterval(animateScroll, 16);
+
+                 };
+
+                 // Define smooth scroll links
+                 var scrollToggle = document.querySelectorAll('.scroll');
+
+                 // For each smooth scroll link
+                 [].forEach.call(scrollToggle, function (toggle) {
+
+                     // When the smooth scroll link is clicked
+                     toggle.addEventListener('click', function (e) {
+
+                         // Prevent the default link behavior
+                         e.preventDefault();
+
+                         // Get anchor link and calculate distance from the top
+                         var dataID = toggle.getAttribute('href');
+                         var dataTarget = document.querySelector(dataID);
+                         var dataSpeed = toggle.getAttribute('data-speed');
+
+                         // If the anchor exists
+                         if (dataTarget) {
+                             // Scroll to the anchor
+                             smoothScroll(dataTarget, dataSpeed || 500);
+                         }
+
+                     }, false);
+
+                 });
+
+             }
+
+         })();
+   </script>
+</body>
+</html>
